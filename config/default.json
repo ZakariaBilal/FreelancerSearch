@@ -1,0 +1,4 @@
+{
+  "mongoURI": "mongodb+srv://dbAdmin:pass1234@cluster0-qfkfx.mongodb.net/test?retryWrites=true&w=majority",
+  "jwtSecret": "secret"
+}
