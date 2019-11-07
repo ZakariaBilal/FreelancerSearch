@@ -15,9 +15,9 @@ const DemandeSchema = mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: "freelancers" 
     },
-    client :{
+    user :{
          type: mongoose.Schema.Types.ObjectId,
-        ref: "clients" 
+        ref: "users" 
     },
     price :{
          type: Number

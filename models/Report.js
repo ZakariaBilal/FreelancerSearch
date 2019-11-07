@@ -1,9 +1,9 @@
 const mongoose = require("mongoose");
 
 const ReportSchema = mongoose.Schema({
-  client: {
+  user: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: "clients"
+    ref: "users"
   },
   freelancer: {
     type: mongoose.Schemma.Types.ObjectId,
