@@ -9,11 +9,16 @@ const RatingSchema = mongoose.Schema({
     type: mongoose.Schemma.Types.ObjectId,
     ref: "freelancers"
   },
-  comment: {
+  review: {
     type: String
   },
-  stars: {
+  satisfaction: {
     type: Number
+  },
+  Date:
+  {
+    type: Date,
+    default:Date.now
   }
 });
 

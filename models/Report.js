@@ -11,6 +11,11 @@ const ReportSchema = mongoose.Schema({
   },
   comment: {
     type: String
+  },
+  Date :
+  {
+    type: Date,
+    default: Date.now
   }
 });
 
