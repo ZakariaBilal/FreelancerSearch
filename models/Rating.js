@@ -1,19 +1,24 @@
 const mongoose = require("mongoose");
 
 const RatingSchema = mongoose.Schema({
-  client: {
+  user: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: "clients"
+    ref: "users"
   },
   freelancer: {
     type: mongoose.Schemma.Types.ObjectId,
     ref: "freelancers"
   },
-  comment: {
+  review: {
     type: String
   },
-  stars: {
+  satisfaction: {
     type: Number
+  },
+  Date:
+  {
+    type: Date,
+    default:Date.now
   }
 });
 

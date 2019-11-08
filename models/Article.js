@@ -7,6 +7,13 @@ const ArticleSchema = mongoose.Schema({
   },
   content: {
     type: String
+  },
+  title:{
+    type:String
+  },
+  date:{
+    type: Date,
+    defaut: Date.now
   }
 });
 
