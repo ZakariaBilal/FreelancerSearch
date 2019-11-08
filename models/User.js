@@ -28,7 +28,12 @@ const UserSchema = mongoose.Schema({
     required: true,
     unique: true,
     trim: true
-  }
+  },
+  adresse: {
+    type:String,
+    required: true
+  },
+  infos_banque:{}
 });
 
 module.exports = mongoose.model("user", UserSchema);
