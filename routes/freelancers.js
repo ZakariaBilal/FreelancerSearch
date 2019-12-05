@@ -1,25 +1,21 @@
 const express = require("express");
 const { check, validationResult } = require("express-validator");
-const jwt = require("jsonwebtoken");
-const bcrypt = require("bcryptjs");
+const bcrypt = require("jsonwebtoken");
 const config = require("config");
 const router = express.Router();
 
-const User = require("../models/User");
+const Freelancer = require("../models/Freelancer");
 
 
-//@route POST api/clients
-//@desc Register a client
-//@access Public
+//@route POST api/freelancers
+//@desc Add freelancer details
+//@access Private
 router.post(
   "/",
   [
-    check("name", "Please add a name")
+    check("user", "Please add a name")
       .not()
       .isEmpty(),
-      check("username","Please enter a username").not().isEmpty(),
-      check("tel","Please add a tel").not().isEmpty(),
-      check("adresse","please add an adresse").not().isEmpty(),
     check("email", "please include a valid email").isEmail(),
     check(
       "password",
@@ -44,10 +40,7 @@ router.post(
         user = new User({
           name,
           email,
-          password,
-          username,
-          adresse,
-          tel
+          password
         });
 
         const salt = await bcrypt.genSalt(10);
@@ -83,16 +76,13 @@ router.post(
 router.put("/:id",auth,(req,res) => {
 
   // TODO a more secure way to change the password
-    const {name , email,password,adresse,tel,username} = req.body;
+    const {name , email,password} = req.body;
 
     const userFields = {};
 
     if(name) userFields.name=name;
     if(email) userFields.email=email;
     if(password) userFields.password = password;
-    if(adresse) userFields.adresse = adresse;
-    if(username) userFields.username = username;
-    if(tel) userFields.tel = tel;
 
     try{
       //check if the user is found
