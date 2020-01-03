@@ -8,7 +8,7 @@ const FreelancerSchema = mongoose.Schema({
   numberOfHires: {
     type: Number,default:0
   },
-  hoursOfReplay: {
+  hoursOfReply: {
     type: Number,default:0
   },
   desc: {
