@@ -6,12 +6,13 @@ const FreelancerSchema = mongoose.Schema({
     ref: "users"
   },
   numberOfHires: {
-    type: Number,default:0
+    type: Number,
+    default: 0
   },
   hoursOfReply: {
     type: Number,default:0
   },
-  desc: {
+  description: {
     type: String
   },
   services: [
@@ -20,14 +21,13 @@ const FreelancerSchema = mongoose.Schema({
       ref: "services"
     }
   ],
-  businessHours: [
-    {
-      Day: String,
-      Hours: String
-    }
-  ],
+
   perimetre: {
-    type: number
+    type: Number
+  },
+  numberOfProfileChecks: {
+    type: Number,
+    default: 0
   }
 });
 
