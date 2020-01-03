@@ -6,7 +6,7 @@ const RatingSchema = mongoose.Schema({
     ref: "users"
   },
   freelancer: {
-    type: mongoose.Schemma.Types.ObjectId,
+    type: mongoose.Schema.Types.ObjectId,
     ref: "freelancers"
   },
   review: {
@@ -15,10 +15,9 @@ const RatingSchema = mongoose.Schema({
   satisfaction: {
     type: Number
   },
-  Date:
-  {
+  Date: {
     type: Date,
-    default:Date.now
+    default: Date.now
   }
 });
 

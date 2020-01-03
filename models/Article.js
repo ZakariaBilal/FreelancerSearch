@@ -2,16 +2,16 @@ const mongoose = require("mongoose");
 
 const ArticleSchema = mongoose.Schema({
   freelancer: {
-    type: mongoose.Schemma.Types.ObjectId,
+    type: mongoose.Schema.Types.ObjectId,
     ref: "freelancers"
   },
   content: {
     type: String
   },
-  title:{
-    type:String
+  title: {
+    type: String
   },
-  date:{
+  date: {
     type: Date,
     defaut: Date.now
   }

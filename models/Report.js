@@ -6,14 +6,13 @@ const ReportSchema = mongoose.Schema({
     ref: "users"
   },
   freelancer: {
-    type: mongoose.Schemma.Types.ObjectId,
+    type: mongoose.Schema.Types.ObjectId,
     ref: "freelancers"
   },
   comment: {
     type: String
   },
-  Date :
-  {
+  Date: {
     type: Date,
     default: Date.now
   }

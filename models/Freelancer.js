@@ -6,10 +6,12 @@ const FreelancerSchema = mongoose.Schema({
     ref: "users"
   },
   numberOfHires: {
-    type: Number,default:0
+    type: Number,
+    default: 0
   },
   hoursOfReplay: {
-    type: Number,default:0
+    type: Number,
+    default: 0
   },
   desc: {
     type: String
@@ -27,7 +29,7 @@ const FreelancerSchema = mongoose.Schema({
     }
   ],
   perimetre: {
-    type: number
+    type: Number
   }
 });
 
