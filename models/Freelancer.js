@@ -5,27 +5,32 @@ const FreelancerSchema = mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: "users"
   },
-  Number_of_hires: {
-    type: Number
+  numberOfHires: {
+    type: Number,
+    default: 0
   },
-  Hours_of_replay: {
-    type: Number
+  hoursOfReplay: {
+    type: Number,
+    default: 0
   },
-  Desc: {
+  desc: {
     type: String
   },
-  services:[{ 
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "services" 
-  }],
-  Business_hours: [{
-    Day :String ,
-    Hours: String
-  }],
-  perimetre:{
-    type : number
+  services: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "services"
+    }
+  ],
+  businessHours: [
+    {
+      Day: String,
+      Hours: String
+    }
+  ],
+  perimetre: {
+    type: Number
   }
-
 });
 
 module.exports = mongoose.model("freelancer", FreelancerSchema);
