@@ -30,10 +30,15 @@ const UserSchema = mongoose.Schema({
     trim: true
   },
   adresse: {
-    type:String,
+    type: String,
     required: true
   },
-  infos_banque:{}
+  infos_banque: {},
+  type: {
+    type: String,
+    enum: ["client", "admin", "freelancer"],
+    default: "client"
+  }
 });
 
 module.exports = mongoose.model("user", UserSchema);
