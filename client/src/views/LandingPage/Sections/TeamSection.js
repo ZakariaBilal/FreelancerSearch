@@ -3,7 +3,6 @@ import React from "react";
 import classNames from "classnames";
 // @material-ui/core components
 import { makeStyles,withStyles  } from "@material-ui/core/styles";
-import PropTypes from 'prop-types';
 // @material-ui/icons
 
 // core components
@@ -20,57 +19,16 @@ import team1 from "assets/img/faces/avatar.jpg";
 import team2 from "assets/img/faces/christian.jpg";
 import team3 from "assets/img/faces/kendall.jpg";
 import Rating from '@material-ui/lab/Rating';
-import SentimentVeryDissatisfiedIcon from '@material-ui/icons/SentimentVeryDissatisfied';
-import SentimentDissatisfiedIcon from '@material-ui/icons/SentimentDissatisfied';
-import SentimentSatisfiedIcon from '@material-ui/icons/SentimentSatisfied';
-import SentimentSatisfiedAltIcon from '@material-ui/icons/SentimentSatisfiedAltOutlined';
-import SentimentVerySatisfiedIcon from '@material-ui/icons/SentimentVerySatisfied';
-import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import DescriptionIcon from '@material-ui/icons/Description';
 
 
 const useStyles = makeStyles(styles);
 
-const StyledRating = withStyles({
-  iconFilled: {
-    color: '#ff6d75',
-  },
-  iconHover: {
-    color: '#ff3d47',
-  },
-})(Rating);
-const customIcons = {
-  1: {
-    icon: <SentimentVeryDissatisfiedIcon />,
-    label: 'Very Dissatisfied',
-  },
-  2: {
-    icon: <SentimentDissatisfiedIcon />,
-    label: 'Dissatisfied',
-  },
-  3: {
-    icon: <SentimentSatisfiedIcon />,
-    label: 'Neutral',
-  },
-  4: {
-    icon: <SentimentSatisfiedAltIcon />,
-    label: 'Satisfied',
-  },
-  5: {
-    icon: <SentimentVerySatisfiedIcon />,
-    label: 'Very Satisfied',
-  },
-};
 
-function IconContainer(props) {
-  const { value, ...other } = props;
-  return <span {...other}>{customIcons[value].icon}</span>;
-}
 
-IconContainer.propTypes = {
-  value: PropTypes.number.isRequired,
-};
+
+
 
 export default function TeamSection() {
   const classes = useStyles();
@@ -79,7 +37,7 @@ export default function TeamSection() {
     classes.imgRoundedCircle,
     classes.imgFluid
   );
-  
+  const [value, setValue] = React.useState(4);
   return (
     <div className={classes.section}>
       <h2 className={classes.title}>Here is our Best Freelancers</h2>
@@ -93,18 +51,17 @@ export default function TeamSection() {
               <h4 className={classes.cardTitle}>
                 Gigi Hadid
                 <br />
-                <small className={classes.smallTitle}>Wedding Planner</small>
+                <small className={classes.smallTitle}>DJ</small>
               </h4>
               <CardBody>
-
               <Box component="fieldset" mb={3} borderColor="transparent">
-        <Rating
-          name="customized-icons"
-          value={2}
-          getLabelText={value => customIcons[value].label}
-          IconContainerComponent={IconContainer}
-        />
-      </Box>
+      
+      <Rating
+        name="simple-controlled"
+        value={value}
+        readOnly 
+      />
+    </Box>
                 
               </CardBody>
               <CardFooter className={classes.justifyCenter}>
@@ -129,18 +86,18 @@ export default function TeamSection() {
               <h4 className={classes.cardTitle}>
                 Christian Louboutin
                 <br />
-                <small className={classes.smallTitle}>Photographe</small>
+                <small className={classes.smallTitle}>Photographer</small>
               </h4>
               <CardBody>
                 
-              <Box component="fieldset" mb={3} borderColor="transparent">
+            
+      
         <Rating
-          name="customized-icons"
-          value={2}
-          getLabelText={value => customIcons[value].label}
-          IconContainerComponent={IconContainer}
+          name="simple-controlled"
+          value={value}
+          readOnly 
         />
-      </Box>
+   
             
               </CardBody>
               <CardFooter className={classes.justifyCenter}>
@@ -164,19 +121,17 @@ export default function TeamSection() {
               <h4 className={classes.cardTitle}>
                 Kendall Jenner
                 <br />
-                <small className={classes.smallTitle}>DIY</small>
+                <small className={classes.smallTitle}>Decoration</small>
               </h4>
               <CardBody>
                 
-              <Box component="fieldset" mb={3} borderColor="transparent">
-        <Rating
-          name="customized-icons"
-          value={2}
-          getLabelText={value => customIcons[value].label}
-          IconContainerComponent={IconContainer}
-        />
-      </Box>
             
+      
+      <Rating
+        name="simple-controlled"
+        value={value}
+        readOnly 
+      />
               </CardBody>
               <CardFooter className={classes.justifyCenter}>
               <Button

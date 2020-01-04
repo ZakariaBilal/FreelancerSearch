@@ -21,6 +21,8 @@ import ViewArticlesFreelancer from "views/ArticlesFreelancer/ViewArticlesFreelan
 import ArticleFreelancer from "views/ArticlesFreelancer/ArticleFreelancer.js";
 import RegisterClient from "views/RegisterClient/RegisterClient.js";
 import ProfilePageFreelancer from "views/ProfilePageFreelancer/ProfilePageFreelancer.js";
+import ProfileFreelancer from "views/ProfilePageFreelancer/ProfileFreelancer.js";
+import ManageRequestsFreelancer from "views/ManageDemandesFreelancer/ManageRequestsFreelancer.js";
 var hist = createBrowserHistory();
 
 ReactDOM.render(
@@ -32,9 +34,11 @@ ReactDOM.render(
     <Route path='/admin/users' component={UsersAdmin} />  
     <Route path='/admin/articles' component={ArticlesAdmin} /> 
     <Route path='/admin/' component={LandingPageAdmin} />
+    <Route path='/freelancer/viewRequests' component={ManageRequestsFreelancer} />
     <Route path='/freelancer/Articles' component={ArticleFreelancer} />
     <Route path='/freelancer/viewArticles' component={ViewArticlesFreelancer} />
     <Route path='/freelancer/newArticle' component={NewArticleFreelancer} />
+    <Route path='/freelancer/profil' component={ProfileFreelancer} />
     <Route path='/freelancer/profileedit' component={ProfilePageFreelancer} />
     <Route path='/freelancer/' component={LandingPageFreelancer} />
     <Route path='/register' component={RegisterClient} />
