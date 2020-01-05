@@ -24,6 +24,9 @@ import ProfilePageFreelancer from "views/ProfilePageFreelancer/ProfilePageFreela
 import ProfileFreelancer from "views/ProfilePageFreelancer/ProfileFreelancer.js";
 import ManageRequestsFreelancer from "views/ManageDemandesFreelancer/ManageRequestsFreelancer.js";
 import testmap from "views/testmap.js";
+import MakeRequest from "views/Requests/MakeRequest.js";
+import CheckRequest from "views/Requests/CheckRequest.js";
+import review from "components/Review/ReviewForm.js"
 var hist = createBrowserHistory();
 
 ReactDOM.render(
@@ -42,7 +45,9 @@ ReactDOM.render(
     <Route path='/freelancer/profil' component={ProfileFreelancer} />
     <Route path='/freelancer/profileedit' component={ProfilePageFreelancer} />
     <Route path='/freelancer/' component={LandingPageFreelancer} />
-    <Route path='/test' component={testmap} />
+    <Route path='/allrequests' component={CheckRequest} />
+    <Route path='/request' component={MakeRequest} />
+    <Route path='/test' component={review} />
     <Route path='/register' component={RegisterClient} />
     <Route path='/login' component={LoginPage} />
     <Route path='/' component={LandingPage} />

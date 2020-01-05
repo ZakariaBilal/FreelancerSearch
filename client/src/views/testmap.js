@@ -38,7 +38,7 @@ export default function GoogleMaps() {
   if (typeof window !== "undefined" && !loaded.current) {
     if (!document.querySelector("#google-maps")) {
       loadScript(
-        "https://maps.googleapis.com/maps/api/js?key=AIzaSyC3G_x0m9OBXAguAFKcZoWCQNzMK5SQ0Ok&libraries=places",
+        "https://maps.googleapis.com/maps/api/place/autocomplete/json?input=1600+Amphitheatre&key=AIzaSyAoXojVXFRFU8Si3egRzERlf4vjuxnocNk&sessiontoken=1234567890        ",
         document.querySelector("head"),
         "google-maps"
       );
@@ -69,10 +69,10 @@ export default function GoogleMaps() {
       return undefined;
     }
 
-    if (inputValue === "") {
+    /*if (inputValue === "") {
       setOptions([]);
       return undefined;
-    }
+    }*/
 
     fetch({ input: inputValue }, results => {
       if (active) {
@@ -101,7 +101,7 @@ export default function GoogleMaps() {
       renderInput={params => (
         <TextField
           {...params}
-          label="Add a location"
+          placeholder="Add a location"
           variant="outlined"
           fullWidth
           onChange={handleChange}

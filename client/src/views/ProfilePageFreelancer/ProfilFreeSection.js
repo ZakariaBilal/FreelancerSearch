@@ -15,10 +15,16 @@ import Radio from '@material-ui/core/Radio';
 // core components
 import styles from "assets/jss/material-kit-react/views/landingPageSections/productStyle.js";
 import clsx from 'clsx';
-
+import service from 'assets/img/freelancer-1.jpg';
 
 import Grid from '@material-ui/core/Grid';
 import Button from "components/CustomButtons/Button.js";
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles(styles);
 const BootstrapInput = withStyles(theme => ({
@@ -147,32 +153,68 @@ export default function ProfilFreeSection() {
         </Grid>
         </Grid>
         
-        <Grid item xs={3}>
+        <Grid item xs={5}>
+        <Card className={classes.card}>
+      <CardActionArea>
+        <CardMedia
+          component="img"
+          alt="Contemplative Reptile"
+          height="140"
+          image={service}
+          title="Contemplative Reptile"
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="h2">
+          I'll make your parties very fun 
+          </Typography>
+          <Typography variant="body2" color="textSecondary" component="p">
+            Category : DJ
+          </Typography>
+          <Typography variant="body2" color="textSecondary" component="p">
+            You can select the kind of music you like and i'll play it for you and your friends and family 
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+      <CardActions style={{paddingLeft: '150px'}}>
        
-        <Box bgcolor="#336699" color="secondary.contrastText" p={2}  style={{borderRadius:'80px',width:'70px'}}>
-          DJ
-        </Box>
+        <Button size="small" color="#000000">
+          Make a request 
+        </Button>
+      </CardActions>
+    </Card>
         </Grid>
-        <Grid item xs={3}>
-        <Box bgcolor="#336699" color="secondary.contrastText" p={2}  style={{borderRadius:'80px',width:'70px'}}>
-          Band
-        </Box>
+        <Grid item xs={5}>
+        <Card className={classes.card}>
+      <CardActionArea>
+        <CardMedia
+          component="img"
+          alt="Contemplative Reptile"
+          height="140"
+          image={service}
+          title="Contemplative Reptile"
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="h2">
+          I'll make your parties very fun 
+          </Typography>
+          <Typography variant="body2" color="textSecondary" component="p">
+            Category : Band
+          </Typography>
+          <Typography variant="body2" color="textSecondary" component="p">
+            You can select the kind of music you like and i'll play it for you and your friends and family 
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+      <CardActions style={{paddingLeft: '150px'}}>
+       
+        <Button size="small" color="#000000">
+          Make a request 
+        </Button>
+      </CardActions>
+    </Card>
         </Grid>
         </Grid>
-        <Grid container spacing={3}>
-        <Grid item xs={12}>
-        <Grid item xs={6}>
-        <Button
-                color="#000000"
-                size="lg"
-                href="#"
-                rel="noopener noreferrer"
-              >
-Make a Service Request
-              </Button>
-        </Grid>
-        </Grid>
-         </Grid>
+     
               
       </div>
    

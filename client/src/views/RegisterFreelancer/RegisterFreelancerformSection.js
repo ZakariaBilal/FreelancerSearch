@@ -126,6 +126,7 @@ export default function RegisterFreelancerformSection() {
     username: '',
     telephone:'',
     share:"Yes",
+    localisation:'',
     showPassword: false,
   });
 
@@ -172,10 +173,20 @@ export default function RegisterFreelancerformSection() {
         </FormControl>
 
         </Grid>
-        <Grid item xs={12}>
-        //location 
+        <Grid item xs={6}>
+        <FormControl className={clsx(classes.margin, classes.textField)} variant="filled" style={{width:'100%',}}>
+<InputLabel htmlFor="filled-adornment-localisation">Localisation*</InputLabel>
+          <FilledInput
+          required
+          id="filled-adornment-localisation"
+            value={values.localisation}
+            onChange={handleChange('localisation')}
+            labelWidth={70}
+          />
+         
+        </FormControl>
             </Grid>
-            <Grid item xs={12}>
+            <Grid item xs={6}>
             <FormControl component="fieldset" style={{width:'100%',}}>
   <FormLabel component="legend">Do you want to keep your location public?</FormLabel>
   <RadioGroup defaultValue={values.share} aria-label="location" name="customized-radios" >

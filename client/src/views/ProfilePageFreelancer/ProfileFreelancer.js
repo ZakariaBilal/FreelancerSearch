@@ -10,6 +10,8 @@ import Footer from "components/Footer/Footer.js";
 import Button from "components/CustomButtons/Button.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
 import Parallax from "components/Parallax/Parallax.js";
+import Review from "components/Review/Review.js";
+import ReviewForm from "components/Review/ReviewForm.js";
 import profile from "assets/img/faces/avatar.jpg";
 import Grid from '@material-ui/core/Grid';
 import logo from "assets/img/custom/logoreal.png";
@@ -63,8 +65,8 @@ export default function ProfilePageFreelancer(props) {
             </Grid>
          
           <ProfilFreeSection />
-    
-            
+          <Review />
+          <ReviewForm />
           </div>
          
         </div>

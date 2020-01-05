@@ -47,8 +47,7 @@ export default function HeaderLinks(props) {
           <AccountCircleIcon className={classes.icons} /> Logout
         </Button>
       </ListItem>
-     
-     {/* <ListItem className={classes.listItem}>
+     {/*  <ListItem className={classes.listItem}>
         <Button
           href=""
           color="transparent"
@@ -66,7 +65,10 @@ export default function HeaderLinks(props) {
         >
           Are you a freelancer ?
         </Button>
-      </ListItem>*/ } 
+      </ListItem> */
+
+     }
+   
       <ListItem className={classes.listItem}>
         <Button
           href=""

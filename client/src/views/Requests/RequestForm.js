@@ -25,7 +25,10 @@ import FormControl from '@material-ui/core/FormControl';
 import Visibility from '@material-ui/icons/Visibility';
 import VisibilityOff from '@material-ui/icons/VisibilityOff';
 import Grid from '@material-ui/core/Grid';
-
+import Datetime from "react-datetime";
+import TextField from '@material-ui/core/TextField';
+import Select from '@material-ui/core/Select';
+import Input from '@material-ui/core/Input';
 const useStyles = makeStyles(styles);
 const BootstrapInput = withStyles(theme => ({
   root: {
@@ -122,10 +125,20 @@ export default function RequestForm() {
   const [values, setValues] = React.useState({
     description: '',
     localisation: '',
-    service: '',
+    service: '{1}',
     dateExecution: '',
   });
+  const handleChange = prop => event => {
+    setValues({ ...values, [prop]: event.target.value });
+  };
 
+  const handleClickShowPassword = () => {
+    setValues({ ...values, showPassword: !values.showPassword });
+  };
+
+  const handleMouseDownPassword = event => {
+    event.preventDefault();
+  };
   return (
     <div className={classes.section}>
         <form className={classes.form}>
@@ -146,116 +159,79 @@ export default function RequestForm() {
         </FormControl>
         </Grid>
         <Grid item xs={6}>
-        <FormControl className={clsx(classes.margin, classes.textField)} variant="filled" style={{width:'100%',}}>
-<InputLabel htmlFor="filled-adornment-telephone">Telephone*</InputLabel>
-          <FilledInput
-          required
-          id="filled-adornment-telephone"
-            value={values.telephone}
-            onChange={handleChange('telephone')}
-            labelWidth={70}
-          />
-          <InputLabel className={classes.label}>
-                    Datetime Picker
-                  </InputLabel>
-                  <br />
-                  <FormControl fullWidth>
-                    <Datetime
-                      inputProps={{ placeholder: "Datetime Picker Here" }}
-                    />
+       
+
+         
+         
+                
+                  <FormControl variant="filled" style={{width:'100%',}}>
+                  
+                  <TextField
+        id="date"
+        label="Date of execution"
+        type="date"
+        defaultValue=""
+        className={classes.textField}
+        InputLabelProps={{
+          shrink: true,
+        }}
+      />
                   </FormControl>
          
-        </FormControl>
+
 
         </Grid>
-        <Grid item xs={12}>
-        //location 
-            </Grid>
-            <Grid item xs={12}>
-            <FormControl component="fieldset" style={{width:'100%',}}>
-  <FormLabel component="legend">Do you want to keep your location public?</FormLabel>
-  <RadioGroup defaultValue={values.share} aria-label="location" name="customized-radios" >
-    <FormControlLabel value="Yes" control={<StyledRadio />} label="Yes" />
-    <FormControlLabel value="No" control={<StyledRadio />} label="No" />
-   
-  </RadioGroup>
-</FormControl>
-            </Grid>
-            <Grid item xs={6}>
-            <FormControl className={clsx(classes.margin, classes.textField)} variant="filled" style={{width:'100%',}}>
-<InputLabel htmlFor="filled-adornment-username">UserName*</InputLabel>
+        <Grid item xs={6}>
+        <FormControl className={clsx(classes.margin, classes.textField)} variant="filled" style={{width:'100%',}}>
+<InputLabel htmlFor="filled-adornment-localisation">Localisation*</InputLabel>
           <FilledInput
           required
-          id="filled-adornment-username"
-            value={values.username}
-            onChange={handleChange('username')}
+          id="filled-adornment-localisation"
+            value={values.localisation}
+            onChange={handleChange('localisation')}
             labelWidth={70}
           />
          
         </FormControl>
             </Grid>
+      
             <Grid item xs={6}>
+
             <FormControl className={clsx(classes.margin, classes.textField)} variant="filled" style={{width:'100%',}}>
-<InputLabel htmlFor="filled-adornment-email">Email*</InputLabel>
-          <FilledInput
-          required
-          id="filled-adornment-email"
-            value={values.email}
-            onChange={handleChange('email')}
-            labelWidth={70}
-          />
-         
+<InputLabel htmlFor="grouped-native-select">Services</InputLabel>
+<Select native defaultValue="1" input={<Input id="grouped-native-select" />} required style={{width:'40%',}}>
+<option value={values.service} />
+<optgroup label="House">
+<option value={1}>Cleaning</option>
+<option value={2}>Decoration</option>
+<option value={3}>Errands</option>
+</optgroup>
+<optgroup label="Sport And Health">
+<option value={4}>Personnal Coach</option>
+<option value={5}>Swimming lessons</option>
+<option value={6}>Yoga lessons</option>
+<option value={7}>Professionnal Coach</option>
+</optgroup>
+<optgroup label="Tutoring">
+<option value={8}>Music teacher</option>
+<option value={9}>Math teacher</option>
+</optgroup>
+<optgroup label="Event">
+<option value={10}>Photographer</option>
+<option value={11}>DJ</option>
+<option value={12}>Catering</option>
+</optgroup>
+<optgroup label="Garden">
+<option value={13}>Gardening</option>
+</optgroup>
+<optgroup label="Housing">
+<option value={14}>Plumber</option>
+<option value={15}>Carpenter</option>
+<option value={16}>Mechanics</option>
+</optgroup>
+</Select>
         </FormControl>
             </Grid>
-            <Grid item xs={6}>
-                   
-        <FormControl className={clsx(classes.margin, classes.textField)} variant="filled" style={{width:'100%',}}>
-          <InputLabel htmlFor="filled-adornment-password">Password</InputLabel>
-          <FilledInput
-            id="filled-adornment-password"
-            type={values.showPassword ? 'text' : 'password'}
-            value={values.password}
-            onChange={handleChange('password')}
-            endAdornment={
-              <InputAdornment position="end">
-                <IconButton
-                  aria-label="toggle password visibility"
-                  onClick={handleClickShowPassword}
-                  onMouseDown={handleMouseDownPassword}
-                  edge="end"
-                >
-                  {values.showPassword ? <Visibility /> : <VisibilityOff />}
-                </IconButton>
-              </InputAdornment>
-            }
-          />
-        </FormControl>
-                </Grid> 
-            <Grid item xs={6}>
-                    
-                
-        <FormControl className={clsx(classes.margin, classes.textField)} variant="filled" style={{width:'100%',}}>
-          <InputLabel htmlFor="filled-adornment-confirmpassword">Confirm Password</InputLabel>
-          <FilledInput
-            id="filled-adornment-confirmpassword"
-            type={values.showPassword ? 'text' : 'password'}
-            value={values.password}
-            onChange={handleChange('confirmpassword')}
-            endAdornment={
-              <InputAdornment position="end">
-                <IconButton
-                  aria-label="toggle confirmpassword visibility"
-                  onClick={handleClickShowPassword}
-                  onMouseDown={handleMouseDownPassword}
-                  edge="end"
-                >
-                  {values.showPassword ? <Visibility /> : <VisibilityOff />}
-                </IconButton>
-              </InputAdornment>
-            }
-          />
-        </FormControl>
-            </Grid> 
             <Grid item xs={6}>
             <Button
                 color='success'
