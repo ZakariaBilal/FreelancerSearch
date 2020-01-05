@@ -23,6 +23,7 @@ import RegisterClient from "views/RegisterClient/RegisterClient.js";
 import ProfilePageFreelancer from "views/ProfilePageFreelancer/ProfilePageFreelancer.js";
 import ProfileFreelancer from "views/ProfilePageFreelancer/ProfileFreelancer.js";
 import ManageRequestsFreelancer from "views/ManageDemandesFreelancer/ManageRequestsFreelancer.js";
+import testmap from "views/testmap.js";
 var hist = createBrowserHistory();
 
 ReactDOM.render(
@@ -41,6 +42,7 @@ ReactDOM.render(
     <Route path='/freelancer/profil' component={ProfileFreelancer} />
     <Route path='/freelancer/profileedit' component={ProfilePageFreelancer} />
     <Route path='/freelancer/' component={LandingPageFreelancer} />
+    <Route path='/test' component={testmap} />
     <Route path='/register' component={RegisterClient} />
     <Route path='/login' component={LoginPage} />
     <Route path='/' component={LandingPage} />

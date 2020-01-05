@@ -5,23 +5,23 @@ import MaterialTable from 'material-table';
 export default function TableSection() {
   const [state, setState] = React.useState({
     columns: [
-      { title: 'Name', field: 'name' },
-      { title: 'Surname', field: 'surname' },
-      { title: 'Birth Year', field: 'birthYear', type: 'numeric' },
+      { title: 'ID', field: 'id' ,type:'numeric' },
+      { title: 'Comment', field: 'comment' },
+      { title: 'Date', field: 'date' },
       {
-        title: 'Birth Place',
-        field: 'birthCity',
-        lookup: { 34: 'İstanbul', 63: 'Şanlıurfa' },
+        title: 'IDAricle',
+        field: 'idarticle',
+        type:'numeric' 
+      },
+      {
+        title: 'IDUser',
+        field: 'iduser',type:'numeric' 
       },
     ],
     data: [
-      { name: 'Mehmet', surname: 'Baran', birthYear: 1987, birthCity: 63 },
-      {
-        name: 'Zerya Betül',
-        surname: 'Baran',
-        birthYear: 2017,
-        birthCity: 34,
-      },
+      { id: 1, comment: 'this user is disrespectful', date: '2019-10-25', idarticle: null,iduser:3},
+      { id: 2, comment: 'this article has bad language', date: '2019-10-27', idarticle: 1,iduser:null},
+     
     ],
   });
 
@@ -31,17 +31,7 @@ export default function TableSection() {
       columns={state.columns}
       data={state.data}
       editable={{
-        onRowAdd: newData =>
-          new Promise(resolve => {
-            setTimeout(() => {
-              resolve();
-              setState(prevState => {
-                const data = [...prevState.data];
-                data.push(newData);
-                return { ...prevState, data };
-              });
-            }, 600);
-          }),
+        onRowAdd: (null),
         onRowUpdate: (newData, oldData) =>
           new Promise(resolve => {
             setTimeout(() => {

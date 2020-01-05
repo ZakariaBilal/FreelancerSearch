@@ -73,7 +73,7 @@ export default function NewArticleFreelancer(props) {
         <div className={classes.container}>
           <GridContainer>
             <GridItem xs={12} sm={12} md={6}>
-              <h1 className={classes.title}>Express yourself by creating a new article </h1>
+              <h1 className={classes.title}>Manage Your own Articles </h1>
               
               <br />
              

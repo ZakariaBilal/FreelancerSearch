@@ -46,7 +46,7 @@ export default function HeaderLinks(props) {
           target="_blank"
           className={classes.navLink}
         >
-          <AccountCircleIcon className={classes.icons} /> Login
+          <AccountCircleIcon className={classes.icons} /> Logout
         </Button>
       </ListItem>
       <ListItem className={classes.listItem}>

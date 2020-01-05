@@ -15,6 +15,7 @@
   "license": "ISC",
   "dependencies": {
     "@material-ui/lab": "^4.0.0-alpha.38",
+    "autosuggest-highlight": "^3.1.1",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "config": "^3.2.3",
@@ -27,8 +28,11 @@
     "material-table": "^1.54.2",
     "material-ui": "^0.20.2",
     "material-ui-autocomplete-google-places": "^2.3.0",
+    "material-ui-search-bar": "^0.4.2",
     "mongoose": "^5.7.6",
     "mui-rte": "^1.11.0",
+    "react-load-script": "0.0.6",
+    "react-lodash": "^0.1.2",
     "structjson": "^1.0.1"
   },
   "devDependencies": {

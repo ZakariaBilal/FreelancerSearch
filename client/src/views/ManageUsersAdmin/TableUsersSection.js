@@ -5,29 +5,24 @@ import MaterialTable from 'material-table';
 export default function TableUsersSection() {
   const [state, setState] = React.useState({
     columns: [
-      { title: 'Name', field: 'name' },
-      { title: 'Surname', field: 'surname' },
-      { title: 'Birth Year', field: 'birthYear', type: 'numeric' },
-      {
-        title: 'Birth Place',
-        field: 'birthCity',
-        lookup: { 34: 'İstanbul', 63: 'Şanlıurfa' },
-      },
+      { id: 'ID', field: 'id'  ,type: 'numeric'},
+      { title: 'Full Name', field: 'full_name' },
+      { title: 'Username', field: 'username' },
+      { title: 'BirthDay', field: 'birthday'},
+      { title: 'Email', field: 'email', type: 'email' },
+      { title: 'Password', field: 'password' },
+      { title: 'Address', field: 'address'},
     ],
     data: [
-      { name: 'Mehmet', surname: 'Baran', birthYear: 1987, birthCity: 63 },
-      {
-        name: 'Zerya Betül',
-        surname: 'Baran',
-        birthYear: 2017,
-        birthCity: 34,
-      },
+      { id:1, full_name: 'Gigi Hadid', username: 'Gigi Hadid', birthday: '1987-08-16', email: 'gigi.hadid@gmail.com',password: 'mypassword',address:'New york,215 uppereast side' },
+      { id:2,full_name: 'Christian Louboutin', username: 'Christian Louboutin', birthday: '1997-07-16', email: 'christian.louboutin@gmail.com',password: 'mypassword1',address:'losangles,215 the wind' },
+      { id:3,full_name: 'Kendall Jenner', username: 'Kendall Jenner', birthday: '1998-11-16', email: 'kendall.jenner@gmail.com',password: 'mypassword2',address:'carlina,215 fun town' },
     ],
   });
 
   return (
     <MaterialTable
-      title="Users"
+      title="Freelancers"
       columns={state.columns}
       data={state.data}
       editable={{

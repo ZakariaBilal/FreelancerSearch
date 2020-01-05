@@ -33,6 +33,11 @@ const UserSchema = mongoose.Schema({
     type: String,
     required: true
   },
+  Birthday: {
+    type: Date,
+    required: true,
+    default:Date.now
+  },
   infos_banque: {},
   type: {
     type: String,

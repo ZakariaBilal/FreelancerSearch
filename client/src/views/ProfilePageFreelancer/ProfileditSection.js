@@ -148,8 +148,8 @@ value={values.description}
         </Grid>
         <Grid item xs={12}>
          
-<InputLabel htmlFor="grouped-native-select">Service</InputLabel>
-<Select native defaultValue="" input={<Input id="grouped-native-select" />} required style={{width:'40%',}}>
+<InputLabel htmlFor="grouped-native-select">Services</InputLabel>
+<Select native defaultValue="1" input={<Input id="grouped-native-select" />} required style={{width:'40%',}}>
 <option value="" />
 <optgroup label="House">
 <option value={1}>Cleaning</option>

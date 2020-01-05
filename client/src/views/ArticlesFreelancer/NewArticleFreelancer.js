@@ -20,6 +20,7 @@ import MUIRichTextEditor from 'mui-rte';
 import styles from "assets/jss/material-kit-react/views/landingPage.js";
 import TextField from '@material-ui/core/TextField';
 
+import Button from "components/CustomButtons/Button.js";
 // Sections for this page
 
 const defaultTheme = createMuiTheme()
@@ -90,6 +91,7 @@ export default function NewArticleFreelancer(props) {
 
       <div className={classNames(classes.main, classes.mainRaised)} style={{padding:'50px',}}>
         <div className={classes.container}>
+        <form >
         <TextField
           id="standard-full-width"
           label="Title"
@@ -107,9 +109,23 @@ export default function NewArticleFreelancer(props) {
         //onSave
     />
 </MuiThemeProvider>
-          
+<Button
+                color='success'
+                size='lg'
+                rel='noopener noreferrer'
+                type='submit'
+                style={{ margin: 8 }}
+              >
+                Create article
+
+              </Button>
+     
+</form>
+
         </div>
+        
       </div>
+    
       <Footer />
     </div>
       
