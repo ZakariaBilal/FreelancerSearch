@@ -31,9 +31,12 @@
     "material-ui-search-bar": "^0.4.2",
     "mongoose": "^5.7.6",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "structjson": "^1.0.1",
     "uuid": "^3.3.3"
 =======
+=======
+>>>>>>> 71d5fac987f9997f4cf52a204118ff988881142c
     "mui-rte": "^1.11.0",
     "react-load-script": "0.0.6",
     "react-lodash": "^0.1.2",
