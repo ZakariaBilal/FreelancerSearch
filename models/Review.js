@@ -15,7 +15,7 @@ const RatingSchema = mongoose.Schema({
   satisfaction: {
     type: Number
   },
-  Date: {
+  date: {
     type: Date,
     default: Date.now
   }

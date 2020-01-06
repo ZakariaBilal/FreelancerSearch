@@ -33,11 +33,14 @@
     "material-ui-autocomplete-google-places": "^2.3.0",
     "material-ui-search-bar": "^0.4.2",
     "mongoose": "^5.7.6",
+    "structjson": "^1.0.1",
+    "uuid": "^3.3.3",
     "mui-rte": "^1.11.0",
     "react-load-script": "0.0.6",
     "react-lodash": "^0.1.2",
     "socket.io": "^2.3.0",
     "structjson": "^1.0.1"
+
   },
   "devDependencies": {
     "babel-watch": "^7.0.0",

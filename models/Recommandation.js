@@ -1,32 +1,20 @@
 const mongoose = require("mongoose");
 
-const ArticleSchema = mongoose.Schema({
+const RecommandationSchema = mongoose.Schema({
   freelancer: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "freelancers"
   },
-  content: {
-    type: String
-  },
-  title: {
-    type: String
-  },
-  date: {
+  startDate: {
     type: Date,
-    defaut: Date.now
+    default: Date.now
   },
-  numberOfLikes: {
-    type: Number,
-    default: 0
+  endDate: {
+    type: Date
   },
-  numberOfComments: {
-    type: Number,
-    default: 0
-  },
-  numberOfVisits: {
-    type: Number,
-    default: 0
+  price: {
+    type: Number
   }
 });
 
-module.exports = mongoose.model("article", ArticleSchema);
+module.exports = mongoose.model("recommandation", RecommandationSchema);
