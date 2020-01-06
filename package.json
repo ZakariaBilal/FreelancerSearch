@@ -14,16 +14,31 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@material-ui/lab": "^4.0.0-alpha.38",
+    "autosuggest-highlight": "^3.1.1",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "config": "^3.2.3",
     "dialogflow": "^1.0.0",
     "express": "^4.17.1",
     "express-validator": "^6.2.0",
+    "google-maps-react": "^2.0.2",
+    "googlePlaceAutocomplete": "^1.0.3",
     "jsonwebtoken": "^8.5.1",
+    "material-table": "^1.54.2",
+    "material-ui": "^0.20.2",
+    "material-ui-autocomplete-google-places": "^2.3.0",
+    "material-ui-search-bar": "^0.4.2",
     "mongoose": "^5.7.6",
+<<<<<<< HEAD
     "structjson": "^1.0.1",
     "uuid": "^3.3.3"
+=======
+    "mui-rte": "^1.11.0",
+    "react-load-script": "0.0.6",
+    "react-lodash": "^0.1.2",
+    "structjson": "^1.0.1"
+>>>>>>> 71d5fac987f9997f4cf52a204118ff988881142c
   },
   "devDependencies": {
     "concurrently": "^5.0.0",

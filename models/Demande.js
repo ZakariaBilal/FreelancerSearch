@@ -23,13 +23,15 @@ const DemandeSchema = mongoose.Schema({
     type: Number
   },
   date_effectue: {
-    type: Date
+    type: Date,
+    default:Date.now
   },
   date_execution: {
     type: Date
   },
   statuts: {
-    type: String
+    type: String,
+    default:'Waiting for validation'
   }
 });
 
