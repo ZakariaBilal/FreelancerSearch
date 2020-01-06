@@ -1,7 +1,9 @@
 const express = require("express");
 const connectDB = require("./config/db");
-
 const app = express();
+
+const http = require("http").createServer(app);
+const io = require("socket.io")(http);
 
 //Connect database
 connectDB();
@@ -28,6 +30,13 @@ app.get("/", (req, res) => {
   res.send("hi");
 });
 
+io.on("connection", function(socket) {
+  console.log("a user connected");
+  socket.on("disconnect", function() {
+    console.log("user diconnected");
+  });
+});
+
 const PORT = process.env.port || 5000;
 
-app.listen(PORT, () => console.log(`server started on port ${PORT}`));
+http.listen(PORT, () => console.log(`server started on port ${PORT}`));

@@ -27,20 +27,19 @@
     "express-validator": "^6.2.0",
     "google-maps-react": "^2.0.2",
     "googlePlaceAutocomplete": "^1.0.3",
+    "http": "0.0.0",
     "jsonwebtoken": "^8.5.1",
     "material-table": "^1.54.2",
     "material-ui": "^0.20.2",
     "material-ui-autocomplete-google-places": "^2.3.0",
     "material-ui-search-bar": "^0.4.2",
     "mongoose": "^5.7.6",
-    "structjson": "^1.0.1",
-    "uuid": "^3.3.3",
     "mui-rte": "^1.11.0",
     "react-load-script": "0.0.6",
     "react-lodash": "^0.1.2",
     "socket.io": "^2.3.0",
-    "structjson": "^1.0.1"
-
+    "structjson": "^1.0.1",
+    "uuid": "^3.3.3"
   },
   "devDependencies": {
     "babel-watch": "^7.0.0",

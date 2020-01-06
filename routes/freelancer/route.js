@@ -1,10 +1,10 @@
 const router = require("express").Router();
 const controller = require("./controller");
 
-router.get("/", controller.getMatieres);
-router.get("/:id", controller.getMatiere);
-router.post("/", controller.addMatiere);
-router.put("/:id", controller.updateMatiere);
-router.delete("/:id", controller.deleteMatiere);
+router.get("/", controller.getFreelancers);
+router.get("/:id", controller.getFreelancer);
+router.post("/", controller.addFreelancer);
+router.put("/:id", controller.updateFreelancer);
+router.delete("/:id", controller.deleteFreelancer);
 
 module.exports = router;
