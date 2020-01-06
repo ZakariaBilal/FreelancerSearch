@@ -18,7 +18,13 @@ async function queryEvent(req, res) {
   res.send(responses[0].queryResult);
 }
 
+async function webhook(req, res) {
+  if (!req.body) return res.status(400).send("error no body");
+  res.setHeader("Content-Type");
+}
+
 module.exports = {
   queryEvent,
-  queryText
+  queryText,
+  webhook
 };

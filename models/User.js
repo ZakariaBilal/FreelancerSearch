@@ -33,7 +33,6 @@ const UserSchema = mongoose.Schema({
     type: String,
     required: true
   },
-  infos_banque: {},
   type: {
     type: String,
     enum: ["client", "admin", "freelancer"],

@@ -9,19 +9,9 @@ const FreelancerSchema = mongoose.Schema({
     type: Number,
     default: 0
   },
-  hoursOfReplay: {
-    type: Number,
-    default: 0
-  },
   description: {
     type: String
   },
-  services: [
-    {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "services"
-    }
-  ],
 
   perimetre: {
     type: Number
