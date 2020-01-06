@@ -44,10 +44,10 @@ export default function HeaderLinks(props) {
           target="_blank"
           className={classes.navLink}
         >
-          <AccountCircleIcon className={classes.icons} /> Logout
+          <AccountCircleIcon className={classes.icons} /> Login
         </Button>
       </ListItem>
-     {/*  <ListItem className={classes.listItem}>
+       <ListItem className={classes.listItem}>
         <Button
           href=""
           color="transparent"
@@ -65,9 +65,9 @@ export default function HeaderLinks(props) {
         >
           Are you a freelancer ?
         </Button>
-      </ListItem> */
+      </ListItem> 
 
-     }
+     
    
       <ListItem className={classes.listItem}>
         <Button
