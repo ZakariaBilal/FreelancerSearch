@@ -23,15 +23,14 @@ import styles from "assets/jss/material-kit-react/components/headerLinksStyle.js
 
 const useStyles = makeStyles(styles);
 
-export default function HeaderLinks(props) {
+export default function HeaderAfterLinks(props) {
   const classes = useStyles();
   return (
     <List className={classes.list}>
      <ListItem className={classes.listItem}>
         <Button
-          link="/"
+          href="#"
           color="transparent"
-          target="_blank"
           className={classes.navLink}
         >
           <HomeIcon className={classes.icons} /> Home
@@ -43,35 +42,17 @@ export default function HeaderLinks(props) {
           color="transparent"
           className={classes.navLink}
         >
-          <AccountCircleIcon className={classes.icons} /> Login
+          <AccountCircleIcon className={classes.icons} /> Logout
         </Button>
       </ListItem>
-       <ListItem className={classes.listItem}>
-        <Button
-          href="/register"
-          color="transparent"
-          className={classes.navLink}
-        >
-          Register
-        </Button>
-      </ListItem><ListItem className={classes.listItem}>
-        <Button
-          href="/freelancer/login"
-          color="transparent"
-          target="_blank"
-          className={classes.navLink}
-        >
-          Are you a freelancer ?
-        </Button>
-      </ListItem> 
+       
 
      
    
       <ListItem className={classes.listItem}>
         <Button
-          href=""
+          href="#"
           color="transparent"
-          target="_blank"
           className={classes.navLink}
         >
           <InfoIcon className={classes.icons} /> About

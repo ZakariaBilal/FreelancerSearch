@@ -14,7 +14,7 @@ import Footer from "components/Footer/Footer.js";
 import Header from "components/Header/Header.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
-import HeaderLinks from "components/Header/HeaderLinks.js";
+import HeaderAfterLinks from "components/HeaderAfterConnection/HeaderAfterLinks.js";
 import Parallax from "components/Parallax/Parallax.js";
 
 import styles from "assets/jss/material-kit-react/views/landingPage.js";
@@ -50,7 +50,7 @@ export default function LandingPageFreelancer(props) {
       brand={<img src={logo}/>}
       fixed
       leftLinks={<span />}
-      rightLinks={<HeaderLinks />}
+      rightLinks={<HeaderAfterLinks />}
     />
       <Parallax filter image={require("assets/img/custom/freelancerdesk.jpg")}>
         <div className={classes.container}>

@@ -28,6 +28,7 @@ import MakeRequest from "views/Requests/MakeRequest.js";
 import CheckRequest from "views/Requests/CheckRequest.js";
 import LoginFreelancer from "views/LoginFreelancer/LoginFreelancer.js";
 import review from "components/Chat.js";
+import RegisterFreelancer from "views/RegisterFreelancer/RegisterFreelancer.js"
 var hist = createBrowserHistory();
 
 ReactDOM.render(
@@ -46,6 +47,7 @@ ReactDOM.render(
     <Route path='/freelancer/profil' component={ProfileFreelancer} />
     <Route path='/freelancer/profileedit' component={ProfilePageFreelancer} />
     <Route path='/freelancer/login' component={LoginFreelancer} />
+    <Route path='/freelancer/register' component={RegisterFreelancer} />
     <Route path='/freelancer/' component={LandingPageFreelancer} />
     <Route path='/allrequests' component={CheckRequest} />
     <Route path='/request' component={MakeRequest} />

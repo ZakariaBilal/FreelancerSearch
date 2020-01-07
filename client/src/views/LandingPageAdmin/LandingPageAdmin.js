@@ -8,7 +8,7 @@ import clsx from 'clsx';
 import Email from "@material-ui/icons/Email";
 // core components
 import Header from "components/AdminHeader/HeaderAdmin.js";
-import HeaderLinks from "components/AdminHeader/HeaderAdminLinks.js";
+import HeaderAfterLinks from "components/HeaderAfterConnection/HeaderAfterLinks.js";
 import Footer from "components/Footer/Footer.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
@@ -69,7 +69,7 @@ export default function LoginPage(props) {
       brand={<img src={logo}/>}
       fixed
       leftLinks={<span />}
-      rightLinks={<HeaderLinks />}
+      rightLinks={<HeaderAfterLinks />}
     />
       <div
         className={classes.pageHeader}

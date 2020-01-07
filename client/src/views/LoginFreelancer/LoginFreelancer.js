@@ -135,7 +135,7 @@ export default function LoginPage(props) {
                   <Button
                 color='success'
                 size='lg'
-                target='_blank'
+                href='/freelancer/viewRequests'
                 rel='noopener noreferrer'
                 type='submit'
               >
@@ -147,12 +147,12 @@ export default function LoginPage(props) {
                   </CardFooter>
                 </form>
                 <Grid item xs={6}>
-                <Button variant="contained" color="transparent" href="">
+                <Button variant="contained" color="transparent" href="/freelancer/register">
   You don't have an account ? Register!
 </Button>
         </Grid>
         <Grid item xs={6}>
-        <Button variant="contained" color="transparent" href="">
+        <Button variant="contained" color="transparent" href="/login">
   Are you a Client ?
 </Button>
         </Grid>
@@ -165,4 +165,5 @@ export default function LoginPage(props) {
       </div>
     </div>
   );
-}
+      }
+      
