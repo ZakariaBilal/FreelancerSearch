@@ -86,7 +86,6 @@ export default function LoginPage(props) {
                 <form className={classes.form}>
                   <CardHeader color="primary" className={classes.cardHeader}>
                     <h4>Login</h4>
-                    
                   </CardHeader>
                   
                   <CardBody>
