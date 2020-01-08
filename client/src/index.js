@@ -28,33 +28,38 @@ import MakeRequest from "views/Requests/MakeRequest.js";
 import CheckRequest from "views/Requests/CheckRequest.js";
 import LoginFreelancer from "views/LoginFreelancer/LoginFreelancer.js";
 import review from "components/Chat.js";
+import Chatbot from "components/chatbot";
 var hist = createBrowserHistory();
 
 ReactDOM.render(
   <Router history={hist}>
-    
     <Switch>
-
-    <Route path='/admin/reports' component={ReportsAdmin} />  
-    <Route path='/admin/users' component={UsersAdmin} />  
-    <Route path='/admin/articles' component={ArticlesAdmin} /> 
-    <Route path='/admin/' component={LandingPageAdmin} />
-    <Route path='/freelancer/viewRequests' component={ManageRequestsFreelancer} />
-    <Route path='/freelancer/Articles' component={ArticleFreelancer} />
-    <Route path='/freelancer/viewArticles' component={ViewArticlesFreelancer} />
-    <Route path='/freelancer/newArticle' component={NewArticleFreelancer} />
-    <Route path='/freelancer/profil' component={ProfileFreelancer} />
-    <Route path='/freelancer/profileedit' component={ProfilePageFreelancer} />
-    <Route path='/freelancer/login' component={LoginFreelancer} />
-    <Route path='/freelancer/' component={LandingPageFreelancer} />
-    <Route path='/allrequests' component={CheckRequest} />
-    <Route path='/request' component={MakeRequest} />
-    <Route path='/test' component={review} />
-    <Route path='/register' component={RegisterClient} />
-    <Route path='/login' component={LoginPage} />
-    <Route path='/' component={LandingPage} />
+      <Route path='/admin/reports' component={ReportsAdmin} />
+      <Route path='/admin/users' component={UsersAdmin} />
+      <Route path='/admin/articles' component={ArticlesAdmin} />
+      <Route path='/admin/' component={LandingPageAdmin} />
+      <Route
+        path='/freelancer/viewRequests'
+        component={ManageRequestsFreelancer}
+      />
+      <Route path='/chatbot' component={Chatbot} />
+      <Route path='/freelancer/Articles' component={ArticleFreelancer} />
+      <Route
+        path='/freelancer/viewArticles'
+        component={ViewArticlesFreelancer}
+      />
+      <Route path='/freelancer/newArticle' component={NewArticleFreelancer} />
+      <Route path='/freelancer/profil' component={ProfileFreelancer} />
+      <Route path='/freelancer/profileedit' component={ProfilePageFreelancer} />
+      <Route path='/freelancer/login' component={LoginFreelancer} />
+      <Route path='/freelancer/' component={LandingPageFreelancer} />
+      <Route path='/allrequests' component={CheckRequest} />
+      <Route path='/request' component={MakeRequest} />
+      <Route path='/test' component={review} />
+      <Route path='/register' component={RegisterClient} />
+      <Route path='/login' component={LoginPage} />
+      <Route path='/' component={LandingPage} />
     </Switch>
-  
   </Router>,
   document.getElementById("root")
 );

@@ -20,7 +20,7 @@ app
   .use("/freelancers", require("./routes/freelancer/route"))
   .use("/reviews", require("./routes/review/route"))
   .use("/reports", require("./routes/report/route"))
-  .use("/users", require("./routes/users/route"))
+  .use("/users", require("./routes/user/route"))
   .use("/message", require("./routes/message/route"))
   .use("/chatbot", require("./chatbot/route/route"))
   .get("*", (_, res) =>

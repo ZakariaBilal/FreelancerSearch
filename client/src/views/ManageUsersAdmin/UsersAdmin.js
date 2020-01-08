@@ -2,9 +2,7 @@ import React from "react";
 // nodejs library that concatenates classes
 import classNames from "classnames";
 // @material-ui/core components
-import { 
-  makeStyles,
-  } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 
 import logo from "assets/img/custom/logoreal.png";
 import Footer from "components/Footer/Footer.js";
@@ -22,8 +20,6 @@ import styles from "assets/jss/material-kit-react/views/landingPage.js";
 // Sections for this page
 import TableUsersSection from "./TableUsersSection.js";
 
-
-
 const dashboardRoutes = [];
 
 const useStyles = makeStyles(styles);
@@ -32,7 +28,6 @@ export default function LandingPage(props) {
   const classes = useStyles();
   const { ...rest } = props;
   return (
-    
     <div>
       {/* <Header
         color='white'
@@ -46,39 +41,22 @@ export default function LandingPage(props) {
         }}
         {...rest}
       /> */}
-<Header
-      brand={<img src={logo}/>}
-      fixed
-      leftLinks={<span />}
-      rightLinks={<HeaderLinks />}
-    />
-      <Parallax filter image={require("assets/img/adm.jpg")}>
-        <div className={classes.container}>
-          <GridContainer>
-            <GridItem xs={12} sm={12} md={6}>
-              <h1 className={classes.title}>We Make managing your plateforme very easy!</h1>
-              
-              <br />
-             
-            </GridItem>
-         
-
-          </GridContainer>
-        </div>
-
-     
-      </Parallax>
+      <Header
+        brand={<img src={logo} />}
+        fixed
+        leftLinks={<span />}
+        rightLinks={<HeaderLinks />}
+      />
 
       <div className={classNames(classes.main, classes.mainRaised)}>
-        <div className={classes.container} style={{padding:'50px',}}>
-      
-          <TableUsersSection style={{margin:'15px',}}/>
-     
-          
+        <div
+          className={classes.container}
+          style={{ padding: "50px", marginTop: "200px" }}
+        >
+          <TableUsersSection style={{ margin: "15px" }} />
         </div>
       </div>
       <Footer />
     </div>
-      
   );
 }

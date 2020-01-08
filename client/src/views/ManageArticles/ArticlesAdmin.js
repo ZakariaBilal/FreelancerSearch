@@ -2,9 +2,7 @@ import React from "react";
 // nodejs library that concatenates classes
 import classNames from "classnames";
 // @material-ui/core components
-import { 
-  makeStyles,
-  } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 
 import logo from "assets/img/custom/logoreal.png";
 import Footer from "components/Footer/Footer.js";
@@ -22,8 +20,6 @@ import styles from "assets/jss/material-kit-react/views/landingPage.js";
 // Sections for this page
 import TableArticlesSection from "./TableArticlesSection.js";
 
-
-
 const dashboardRoutes = [];
 
 const useStyles = makeStyles(styles);
@@ -32,27 +28,13 @@ export default function LandingPage(props) {
   const classes = useStyles();
   const { ...rest } = props;
   return (
-    
     <div>
-      {/* <Header
-        color='white'
-        routes={dashboardRoutes}
-        brand='Material Kit React'
+      <Header
+        brand={<img src={logo} />}
+        leftLinks={<span />}
         rightLinks={<HeaderLinks />}
-        fixed
-        changeColorOnScroll={{
-          height: 400,
-          color: "white"
-        }}
-        {...rest}
-      /> */}
-<Header
-      brand={<img src={logo}/>}
-      fixed
-      leftLinks={<span />}
-      rightLinks={<HeaderLinks />}
-    />
-      <Parallax filter image={require("assets/img/adm.jpg")}>
+      />
+      {/* <Parallax filter image={require("assets/img/adm.jpg")}>
         <div className={classes.container}>
           <GridContainer>
             <GridItem xs={12} sm={12} md={6}>
@@ -67,18 +49,17 @@ export default function LandingPage(props) {
         </div>
 
      
-      </Parallax>
+      </Parallax> */}
 
       <div className={classNames(classes.main, classes.mainRaised)}>
-        <div className={classes.container} style={{padding:'50px',}}>
-      
-          <TableArticlesSection style={{margin:'15px',}}/>
-     
-          
+        <div
+          className={classes.container}
+          style={{ padding: "50px", margin: "100px" }}
+        >
+          <TableArticlesSection style={{ margin: "15px" }} />
         </div>
       </div>
       <Footer />
     </div>
-      
   );
 }
